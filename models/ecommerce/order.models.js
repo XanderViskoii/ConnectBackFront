@@ -29,7 +29,7 @@ const orderSchema = new mongoose.Schema(
        },
        status: {
         type: String,
-        enum: ["PENDING", CANCELLED, DELIVERED],
+        enum: ["PENDING", CANCELLED, DELIVERED], //To make a restricted field i.e. we can only choose among these 3 only
         efault: "PENDING"
        }
     },

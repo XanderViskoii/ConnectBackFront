@@ -38,16 +38,16 @@ function RegistrationForm() {
 
       if (!formData.email.trim()) {
         newErrors.email = 'Email is required';
-      } else if (!/^\S+@xyzkumar\.ac\.in$/.test(formData.email)) {
-        newErrors.email = 'Email must be from @xyzkumar.ac.in domain';
+      } else if (!/^\S+@mitsgwl\.ac\.in$/.test(formData.email)) {
+        newErrors.email = 'Email must be from @mitsgwl.ac.in domain';
       }
 
-      if (formData.enrollment.trim() !== '' && !/^\d{4}$/.test(formData.enrollment)) {
-        newErrors.enrollment = 'Enrollment must be a 4-digit number';
+      if (formData.enrollment.trim() !== '' && !/^\d{12}$/.test(formData.enrollment)) {
+        newErrors.enrollment = 'Enrollment must be a 12-digit number';
       }
 
-      if (formData.password.length < 6) {
-        newErrors.password = 'Password must be at least 6 characters long';
+      if (formData.password.length < 4) {
+        newErrors.password = 'Password must be at least 4 characters long';
       }
 
       if (formData.password !== formData.confirmPassword) {
